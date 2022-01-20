@@ -14,11 +14,12 @@ namespace bmiwebApi.Repositories
         {
             var bmi = body.Weight / Math.Pow(body.Height, 2);
 
-            return bmi;
+            return bmi; // <- error
             
         }
         private Body GetBodyFromDb(Body id)
         {
+            //........................................(x.bodyId == id) <= error
             var body = _ctx.Bodies.Where(x => x.bodyId == id).FirstOrDefault();
             return body;
         }
@@ -26,7 +27,8 @@ namespace bmiwebApi.Repositories
         public Body _body { get; set; }
         private Body GetBodyFromDb()
         {
-            var body = _ctx.Bodies.Where(x => x.Id == id).FirstOrDefault();
+            //........................................(x.bodyId == id) <= error
+            var body = _ctx.Bodies.Where(x => x.bodyId == id).FirstOrDefault();
             return _body = body;
         }
     }
