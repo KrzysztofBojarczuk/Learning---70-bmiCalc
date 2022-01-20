@@ -4,7 +4,7 @@
 
 namespace bmiwebApi.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,8 +15,7 @@ namespace bmiwebApi.Migrations
                     bodyId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Weight = table.Column<double>(type: "float", nullable: false),
-                    Height = table.Column<double>(type: "float", nullable: false),
-                    Bmi = table.Column<double>(type: "float", nullable: false)
+                    Height = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {

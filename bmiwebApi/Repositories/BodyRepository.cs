@@ -11,7 +11,6 @@ namespace bmiwebApi.Repositories
         {
             _ctx = ctx;
         }
-
         public async Task<Body> CreateBodyAsync(Body body)
         {
             _ctx.Bodies.Add(body);
@@ -33,6 +32,8 @@ namespace bmiwebApi.Repositories
 
         public async Task<List<Body>> GetAllBodyAsync()
         {
+          
+
             return await _ctx.Bodies.ToListAsync();
         }
 

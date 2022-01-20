@@ -29,9 +29,6 @@ namespace bmiwebApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("bodyId"), 1L, 1);
 
-                    b.Property<double>("Bmi")
-                        .HasColumnType("float");
-
                     b.Property<double>("Height")
                         .HasColumnType("float");
 

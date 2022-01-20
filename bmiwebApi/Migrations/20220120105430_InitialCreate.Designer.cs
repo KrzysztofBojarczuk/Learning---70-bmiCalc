@@ -11,8 +11,8 @@ using bmiwebApi.Data;
 namespace bmiwebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220119074736_Initial")]
-    partial class Initial
+    [Migration("20220120105430_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,9 +30,6 @@ namespace bmiwebApi.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("bodyId"), 1L, 1);
-
-                    b.Property<double>("Bmi")
-                        .HasColumnType("float");
 
                     b.Property<double>("Height")
                         .HasColumnType("float");
